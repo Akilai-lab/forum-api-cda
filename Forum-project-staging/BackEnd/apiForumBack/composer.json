@@ -1,0 +1,12 @@
+{
+    "config": {
+        "allow-plugins": {
+            "symfony/flex": true,
+            "symfony/runtime": true
+        }
+    },
+    "require": {
+        "symfony/framework-bundle": "^6.0",
+        "lexik/jwt-authentication-bundle": "^2.18"
+    }
+}

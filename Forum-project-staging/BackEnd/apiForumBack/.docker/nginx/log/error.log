@@ -1,0 +1,132 @@
+2022/10/24 11:46:08 [emerg] 1#1: unknown directive "//curl:" in /etc/nginx/nginx.conf:72
+2022/10/24 15:05:30 [emerg] 1#1: unknown directive "servername" in /etc/nginx/nginx.conf:24
+2022/10/24 15:34:03 [emerg] 1#1: unknown directive "servername" in /etc/nginx/nginx.conf:24
+2022/10/24 15:34:14 [emerg] 1#1: unknown directive "servername" in /etc/nginx/nginx.conf:24
+2022/10/25 06:53:22 [emerg] 1#1: unknown directive "servername" in /etc/nginx/nginx.conf:24
+2022/10/25 10:04:32 [emerg] 1#1: invalid number of arguments in "ssl_session_cache" directive in /etc/nginx/nginx.conf:21
+2022/10/26 06:42:45 [emerg] 1#1: invalid number of arguments in "ssl_session_cache" directive in /etc/nginx/nginx.conf:21
+2022/10/26 07:19:53 [emerg] 1#1: invalid number of arguments in "ssl_session_cache" directive in /etc/nginx/nginx.conf:21
+2022/10/26 07:23:21 [emerg] 1#1: invalid number of arguments in "ssl_session_cache" directive in /etc/nginx/nginx.conf:21
+2022/10/26 07:37:09 [emerg] 1#1: invalid number of arguments in "ssl_session_cache" directive in /etc/nginx/nginx.conf:21
+2022/10/26 08:30:13 [emerg] 1#1: cannot load certificate "/etc/nginx/./../localhost.crt": BIO_new_file() failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/./../localhost.crt','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2022/10/26 09:42:13 [emerg] 1#1: cannot load certificate "/etc/nginx/./../localhost.crt": BIO_new_file() failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/./../localhost.crt','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2022/10/26 09:45:00 [emerg] 1#1: cannot load certificate "/localhost.crt": BIO_new_file() failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/localhost.crt','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2022/10/26 09:49:31 [emerg] 1#1: cannot load certificate "/etc/nginx/./../localhost.crt": BIO_new_file() failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/./../localhost.crt','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2022/10/26 09:54:34 [emerg] 1#1: cannot load certificate "/etc/nginx/./../localhost.crt": BIO_new_file() failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/./../localhost.crt','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2022/10/26 09:57:47 [emerg] 1#1: cannot load certificate "/etc/nginx/localhost.crt": BIO_new_file() failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/localhost.crt','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2022/10/26 10:02:36 [emerg] 1#1: cannot load certificate "/etc/nginx/localhost.crt": BIO_new_file() failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/localhost.crt','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2022/10/26 11:22:08 [emerg] 1#1: cannot load certificate "/etc/nginx/localhost.crt": BIO_new_file() failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/localhost.crt','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2022/10/26 11:23:25 [emerg] 1#1: cannot load certificate "/etc/nginx/localhost.crt": BIO_new_file() failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/localhost.crt','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2022/10/26 11:59:38 [emerg] 1#1: cannot load certificate "/etc/nginx/localhost.crt": BIO_new_file() failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/localhost.crt','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2022/10/26 13:50:23 [emerg] 1#1: cannot load certificate "/etc/nginx/localhost.crt": BIO_new_file() failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/localhost.crt','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2022/10/26 14:19:08 [emerg] 1#1: directive "add_header" is not terminated by ";" in /etc/nginx/nginx.conf:30
+2022/10/26 14:22:38 [emerg] 1#1: cannot load certificate "/etc/nginx/localhost.crt": BIO_new_file() failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/localhost.crt','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2022/10/26 14:24:46 [emerg] 1#1: cannot load certificate "/etc/nginx/localhost.crt": BIO_new_file() failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/localhost.crt','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2022/10/26 15:07:23 [emerg] 1#1: cannot load certificate "/etc/nginx/localhost.crt": BIO_new_file() failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/localhost.crt','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2022/10/26 15:11:03 [emerg] 1#1: cannot load certificate "/etc/nginx/localhost.crt": BIO_new_file() failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/localhost.crt','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2022/10/26 15:12:13 [emerg] 1#1: cannot load certificate "/etc/nginx/localhost.crt": BIO_new_file() failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/nginx/localhost.crt','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2022/10/27 13:32:08 [emerg] 1#1: "location" directive is not allowed here in /etc/nginx/nginx.conf:49
+2022/10/27 13:32:55 [emerg] 1#1: "location" directive is not allowed here in /etc/nginx/nginx.conf:49
+2022/10/27 13:34:03 [emerg] 1#1: "location" directive is not allowed here in /etc/nginx/nginx.conf:49
+2022/10/27 13:38:54 [emerg] 1#1: unknown directive "proxy_passe" in /etc/nginx/nginx.conf:32
+2022/10/27 14:06:54 [emerg] 1#1: unknown directive "redirect" in /etc/nginx/nginx.conf:40
+2022/10/27 15:00:00 [emerg] 1#1: directive "return" is not terminated by ";" in /etc/nginx/nginx.conf:48
+2022/10/27 15:04:11 [emerg] 1#1: unknown directive "if(location" in /etc/nginx/nginx.conf:40
+2022/10/27 15:17:02 [emerg] 1#1: unknown directive "if(location" in /etc/nginx/nginx.conf:40
+2022/10/28 06:40:21 [emerg] 1#1: unknown directive "if(!location" in /etc/nginx/nginx.conf:85
+2022/10/28 07:18:25 [emerg] 1#1: unknown directive "if(!location" in /etc/nginx/nginx.conf:84
+2022/10/28 07:18:46 [emerg] 1#1: unknown directive "if(!location" in /etc/nginx/nginx.conf:84
+2022/10/28 07:27:21 [emerg] 1#1: unknown directive "if(!location" in /etc/nginx/nginx.conf:79
+2022/10/28 07:57:05 [emerg] 1#1: unknown directive "if($request_method" in /etc/nginx/nginx.conf:42
+2022/10/28 07:57:48 [emerg] 1#1: unknown directive "if($request_method" in /etc/nginx/nginx.conf:42
+2022/10/28 07:58:43 [emerg] 1#1: unknown directive "if($request_method" in /etc/nginx/nginx.conf:42
+2022/10/28 08:58:53 [emerg] 1#1: invalid number of arguments in "return" directive in /etc/nginx/nginx.conf:45
+2022/10/28 09:17:15 [emerg] 1#1: invalid number of arguments in "proxy_set_header" directive in /etc/nginx/nginx.conf:44
+2022/10/28 09:27:55 [emerg] 1#1: invalid variable name in /etc/nginx/nginx.conf:45
+2022/10/28 12:16:29 [emerg] 1#1: invalid number of arguments in "proxy_set_header" directive in /etc/nginx/nginx.conf:43
+2022/10/28 12:21:51 [emerg] 1#1: "add_header" directive is not allowed here in /etc/nginx/nginx.conf:37
+2022/10/28 12:23:43 [emerg] 1#1: "add_header" directive is not allowed here in /etc/nginx/nginx.conf:37
+2022/10/28 12:26:40 [emerg] 1#1: "add_header" directive is not allowed here in /etc/nginx/nginx.conf:37
+2022/10/28 12:46:50 [emerg] 1#1: "add_header" directive is not allowed here in /etc/nginx/nginx.conf:37
+2022/10/28 13:14:04 [emerg] 1#1: "add_header" directive is not allowed here in /etc/nginx/nginx.conf:37
+2022/10/28 13:17:16 [emerg] 1#1: invalid URL prefix in /etc/nginx/nginx.conf:45
+2022/10/28 13:35:30 [emerg] 1#1: invalid URL prefix in /etc/nginx/nginx.conf:38
+2022/10/28 13:46:44 [emerg] 1#1: invalid URL prefix in /etc/nginx/nginx.conf:42
+2022/10/28 14:13:44 [emerg] 1#1: invalid URL prefix in /etc/nginx/nginx.conf:44
+2022/10/28 14:16:45 [emerg] 1#1: invalid number of arguments in "add_header" directive in /etc/nginx/nginx.conf:42
+2022/10/28 14:18:21 [emerg] 1#1: invalid number of arguments in "add_header" directive in /etc/nginx/nginx.conf:42
+2022/10/28 14:22:42 [emerg] 1#1: invalid number of arguments in "add_header" directive in /etc/nginx/nginx.conf:42
+2022/10/28 14:41:16 [emerg] 1#1: invalid number of arguments in "add_header" directive in /etc/nginx/nginx.conf:38
+2022/10/28 14:43:07 [emerg] 1#1: invalid number of arguments in "add_header" directive in /etc/nginx/nginx.conf:39
+2022/10/28 14:47:37 [emerg] 1#1: "add_header" directive is not allowed here in /etc/nginx/nginx.conf:40
+2022/10/28 14:51:00 [emerg] 1#1: "add_header" directive is not allowed here in /etc/nginx/nginx.conf:40
+2022/10/28 14:52:37 [emerg] 1#1: "add_header" directive is not allowed here in /etc/nginx/nginx.conf:40
+2022/10/28 15:02:47 [emerg] 1#1: invalid number of arguments in "proxy_set_header" directive in /etc/nginx/nginx.conf:42
+2022/10/28 15:16:24 [emerg] 1#1: invalid number of arguments in "proxy_set_header" directive in /etc/nginx/nginx.conf:42
+2022/11/02 08:34:03 [emerg] 1#1: invalid number of arguments in "return" directive in /etc/nginx/nginx.conf:43
+2022/11/02 08:34:54 [emerg] 1#1: invalid return code "rewrite" in /etc/nginx/nginx.conf:43
+2022/11/02 08:37:31 [emerg] 1#1: unknown directive "/connect/azure" in /etc/nginx/nginx.conf:36
+2022/11/02 08:41:59 [emerg] 1#1: unexpected "}" in /etc/nginx/nginx.conf:44
+2022/11/02 08:43:07 [emerg] 1#1: unknown directive "location/" in /etc/nginx/nginx.conf:36
+2022/11/02 08:44:23 [emerg] 1#1: unexpected "}" in /etc/nginx/nginx.conf:40
+2022/11/21 12:50:36 [emerg] 1#1: no ssl_client_certificate for ssl_verify_client
+2022/11/21 12:55:47 [emerg] 1#1: no ssl_client_certificate for ssl_verify_client
+2022/11/21 13:23:17 [emerg] 1#1: no ssl_client_certificate for ssl_verify_client
+2022/11/21 13:24:10 [emerg] 1#1: no ssl_client_certificate for ssl_verify_client
+2022/11/21 15:32:27 [emerg] 1#1: no ssl_client_certificate for ssl_verify_client
+2022/11/21 16:16:37 [emerg] 1#1: no ssl_client_certificate for ssl_verify_client
+2022/11/21 16:21:30 [emerg] 1#1: no ssl_client_certificate for ssl_verify_client
+2022/11/21 16:33:37 [emerg] 1#1: no ssl_client_certificate for ssl_verify_client
+2022/11/22 07:44:45 [emerg] 1#1: no ssl_client_certificate for ssl_verify_client
+2022/11/22 08:33:36 [emerg] 1#1: no ssl_client_certificate for ssl_verify_client
+2022/11/22 08:50:50 [emerg] 1#1: no ssl_client_certificate for ssl_verify_client
+2022/11/22 09:11:02 [emerg] 1#1: no ssl_client_certificate for ssl_verify_client
+2022/11/22 09:18:34 [emerg] 1#1: no ssl_client_certificate for ssl_verify_client
+2022/11/22 10:25:31 [emerg] 1#1: no ssl_client_certificate for ssl_verify_client
+2022/11/22 10:28:35 [emerg] 1#1: no ssl_client_certificate for ssl_verify_client
+2022/11/22 10:30:09 [emerg] 1#1: no ssl_client_certificate for ssl_verify_client
+2022/11/22 10:32:18 [emerg] 1#1: no ssl_client_certificate for ssl_verify_client
+2022/11/22 10:35:21 [emerg] 1#1: no ssl_client_certificate for ssl_verify_client
+2022/11/22 10:39:42 [emerg] 1#1: no ssl_client_certificate for ssl_verify_client
+2022/11/22 10:55:10 [emerg] 1#1: no ssl_client_certificate for ssl_verify_client
+2022/11/22 13:47:51 [emerg] 1#1: no ssl_client_certificate for ssl_verify_client
+2022/11/22 14:17:08 [emerg] 1#1: no ssl_client_certificate for ssl_verify_client
+2022/11/23 07:46:10 [emerg] 1#1: no ssl_client_certificate for ssl_verify_client
+2022/11/23 10:48:24 [emerg] 1#1: no ssl_client_certificate for ssl_verify_client
+2022/11/23 13:09:59 [emerg] 1#1: no ssl_client_certificate for ssl_verify_client
+2022/11/23 13:32:41 [emerg] 1#1: no ssl_client_certificate for ssl_verify_client
+2022/11/23 13:35:53 [emerg] 1#1: no ssl_client_certificate for ssl_verify_client
+2022/11/23 14:09:46 [emerg] 1#1: no ssl_client_certificate for ssl_verify_client
+2022/11/23 14:12:43 [emerg] 1#1: no ssl_client_certificate for ssl_verify_client
+2022/11/23 14:22:05 [emerg] 1#1: no ssl_client_certificate for ssl_verify_client
+2022/11/23 14:23:43 [emerg] 1#1: no ssl_client_certificate for ssl_verify_client
+2022/11/23 14:28:10 [emerg] 1#1: no ssl_client_certificate for ssl_verify_client
+2022/11/23 14:35:07 [emerg] 1#1: no ssl_client_certificate for ssl_verify_client
+2022/11/23 14:47:32 [emerg] 1#1: no ssl_client_certificate for ssl_verify_client
+2022/11/23 15:44:20 [emerg] 1#1: no ssl_client_certificate for ssl_verify_client
+2022/11/23 15:44:56 [emerg] 1#1: no ssl_client_certificate for ssl_verify_client
+2022/11/23 15:45:40 [emerg] 1#1: no ssl_client_certificate for ssl_verify_client
+2023/02/15 10:42:14 [emerg] 1#1: host not found in upstream "web-reservations-php" in /etc/nginx/nginx.conf:36
+2023/02/21 16:15:14 [emerg] 1#1: host not found in upstream "web-reservations-php" in /etc/nginx/nginx.conf:36
+2023/02/21 16:41:14 [emerg] 1#1: host not found in upstream "web-reservations-php" in /etc/nginx/nginx.conf:36
+2023/02/22 14:07:09 [emerg] 1#1: host not found in upstream "web-reservations-php" in /etc/nginx/nginx.conf:36
+2023/02/22 14:17:49 [emerg] 1#1: host not found in upstream "web-reservations-php" in /etc/nginx/nginx.conf:36
+2023/02/22 14:26:45 [emerg] 1#1: host not found in upstream "web-reservations-php" in /etc/nginx/nginx.conf:36
+2023/02/22 14:55:39 [emerg] 1#1: host not found in upstream "web-reservations-php" in /etc/nginx/nginx.conf:36
+2023/02/22 15:10:01 [emerg] 1#1: host not found in upstream "web-reservations-php" in /etc/nginx/nginx.conf:36
+2023/02/22 15:24:53 [emerg] 1#1: host not found in upstream "web-reservations-php" in /etc/nginx/nginx.conf:36
+2023/02/22 15:26:19 [emerg] 1#1: host not found in upstream "web-reservations-php" in /etc/nginx/nginx.conf:36
+2023/02/22 16:00:24 [emerg] 1#1: host not found in upstream "web-reservations-php" in /etc/nginx/nginx.conf:36
+2023/02/23 08:42:42 [emerg] 1#1: host not found in upstream "web-reservations-php" in /etc/nginx/nginx.conf:36
+2023/02/26 16:47:48 [emerg] 1#1: host not found in upstream "web-reservations-php" in /etc/nginx/nginx.conf:36
+2023/02/28 14:38:43 [emerg] 1#1: host not found in upstream "web-reservations-php" in /etc/nginx/nginx.conf:36
+2023/03/01 18:43:13 [emerg] 1#1: host not found in upstream "web-reservations-php" in /etc/nginx/nginx.conf:36
+2023/03/06 12:46:31 [emerg] 1#1: host not found in upstream "web-nginx-forum" in /etc/nginx/nginx.conf:36
+2023/03/06 12:51:18 [emerg] 1#1: host not found in upstream "web-nginx-forum" in /etc/nginx/nginx.conf:36
+2023/03/06 15:32:32 [emerg] 1#1: host not found in upstream "web-nginx-forum" in /etc/nginx/nginx.conf:36
+2023/03/06 15:50:29 [emerg] 1#1: host not found in upstream "web-nginx-forum" in /etc/nginx/nginx.conf:36
+2023/03/06 15:54:49 [emerg] 1#1: host not found in upstream "web-nginx-forum" in /etc/nginx/nginx.conf:36
+2023/03/06 15:59:43 [emerg] 1#1: host not found in upstream "web-nginx-forum" in /etc/nginx/nginx.conf:36
+2023/03/07 12:39:39 [emerg] 1#1: host not found in upstream "web-nginx-forum" in /etc/nginx/nginx.conf:36
+2023/03/07 13:06:40 [emerg] 1#1: host not found in upstream "web-nginx-forum" in /etc/nginx/nginx.conf:36
+2023/03/07 13:09:56 [emerg] 1#1: host not found in upstream "web-nginx-forum" in /etc/nginx/nginx.conf:36

@@ -1,0 +1,28 @@
+.container {
+  flex: 1;
+  background-color: #fff;
+  align-items: center;
+  justify-content: center;
+  margin-top:460
+}
+.title1 {
+  margin:10;
+  font-size:large;
+  font-weight:600;
+  width:300;
+  text-align:center;
+  color:#0e0e99
+}
+.title2 {
+  margin:10;
+  font-size:medium;
+  font-weight:600;
+  width:300;
+  text-align:right;
+  color:#a90c8e
+}
+.classicp {
+  width:270;
+  margin-bottom:10;
+  margin-left:10
+}

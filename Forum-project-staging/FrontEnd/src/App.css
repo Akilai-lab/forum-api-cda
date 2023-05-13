@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  background-color: #fff;
+  align-items: center;
+  justify-content: start;
+}
+.App {
+  text-align: center;
+  background-image: url('./assets/humanity-2045992_640.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  min-height: 600px;
+}
+#formLogin {
+  background-color: #ffffffbd;
+  margin: 15% auto 5% auto;
+  padding: 5% 10%;
+}
+#formLogin label {
+  color: #9b1e1e;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.9em;
+}
+#formLogin button {
+  background-color: #ad1a1a;
+  width: auto;
+  color: white;
+  font-size: 1.15em;
+}

@@ -4,16 +4,10 @@ describe('Login Page', () => {
   })
 })
 
-beforeEach(() => {
-  // reset and seed the database prior to every test
-  // cy.exec('npm run db:reset && npm run db:seed')
+afterEach(() => {
+  cy.sqlServer(`DELETE FROM 'user' WHERE 'email' = 'test.adresse@gmail.fr'`).should('eq', 'test');
 
-  // suppression des utilisateurs dont l'id est supérieur à 26
-  cy.pool.exec(`DELETE FROM 'user' WHERE 'id' > '26';`)
-
-  // cy.request('DELETE', 'http://localhost:8081/deleteAccount', {
-  //   userId: 'test.adresse@gmail.fr',
-  // })
+})
 
   // création de nouveau compte utilisateur
   cy.request('POST', 'http://localhost:8081/register', {
@@ -27,8 +21,6 @@ beforeEach(() => {
     password: 'motdepasse',
     // body: '...',
   })
-})
-
 // describe('Register Page', () => {
 //   it('successfully loads', () => {
 //     cy.visit('/register')

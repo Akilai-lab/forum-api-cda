@@ -6,7 +6,7 @@ use App\Repository\CommentsRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: CommentsRepository::class)]
-#[ORM\Table(name: 'commentToPost')]
+#[ORM\Table(name: 'comments')]
 class Comments
 {
     #[ORM\Id]

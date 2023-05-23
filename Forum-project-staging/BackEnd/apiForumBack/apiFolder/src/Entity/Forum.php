@@ -6,7 +6,7 @@ use App\Repository\ForumRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: ForumRepository::class)]
-#[ORM\Table(name: 'forum')]
+#[ORM\Table(name: 'forumPost')]
 class Forum
 {
     #[ORM\Id]

@@ -87,6 +87,7 @@ class RegistrationController extends AbstractController
             ]
         );
     }
+    
     #[Route(path:'/deleteAccount', name: 'app_delete_account', methods: ['DELETE'])]
     public function deleteAccount(Request $request):JsonResponse
     {
@@ -133,5 +134,19 @@ class RegistrationController extends AbstractController
         return new JsonResponse([
             'status'=>'Compte supprimé',
         ]);
+    }
+
+    #[Route(path: '/getAllUsers', name: 'app_get_all_users', methods: ['GET'])]
+    public function getAllUsers(Request $request): JsonResponse
+    {
+        //TODO: Implémenter une fonction qui va permettre de récupérer tous les posts
+        //récupérer la valeur de typeForum de l'url pour faire une recherche comparative avec les types se trouvant dans la bdd
+        $allUsers = $this->doctrine->getRepository(User::class)->findAll();
+
+        return $this->json(
+            (object)[
+                'data' => $allUsers,
+            ]
+        );
     }
 }

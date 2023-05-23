@@ -26,3 +26,19 @@
   margin-bottom:10;
   margin-left:10
 }
+
+.headerImgRedirect {
+  background-image: url('./../../assets/BgndFleurs.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.redirectionMonParcoursPsy  .redirectionGouvernement  .redirectionPsyCom {
+  width: 100% !important;
+}

@@ -16,9 +16,13 @@
 .borderPosts {
   border-color:black; 
   border-style:solid; 
-  border-width: 2; 
-  margin-top:40; 
-  padding:20;
+  border-width: 1.5px;
+  background-image: url('./../../assets/BgndFleurs.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* filter: opacity(0.7); */
+  margin-top: 5%;
   width: 90%;
 }
 Button {
@@ -48,21 +52,27 @@ Button {
   border-color:#0e0e99;
   border-width :1.5
 }
+.headerImg {
+  background-image: url('./../../assets/BgndFleurs.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
 .containerp {
   height:auto; 
   text-align: center;
   text-transform: uppercase;
-  letter-spacing: 3;
+  letter-spacing: 3px;
   color: white;
-  font-size: 1.9em;
-  font-weight: 700!important;
-  background-image: url('./../../assets/humanity-2045992_640.jpg');
-  background-repeat: no-repeat;
-  background-size: 80% 100%;
-  background-position: center;
+  font-size: xx-large;
+  font-weight: 500!important;
   text-shadow: 2px 2px 2px #801818;
-  width: 100%;
-  padding: 15%;
+  width: auto;
+  padding-top: 7%;
 }
 .postdiv {
   width:auto; 
@@ -92,16 +102,26 @@ Button {
   margin: 7px 0;
 }  
 .separateAndStylesBlocsPosts {
-  background-color: #811212a8;
+  background-color: #ffffffad;
   border-bottom: 1.5px solid black;
   margin-bottom: 2%;
-  color: white;
+  color: black;
 }
 /* //color='#953a85' */
 .formAddPost {
-  margin: 5% 0 10% 0 !important;
+  background-color: #ffffffba;
+  margin: 5% auto !important;
   width: 80%;
 }
+.css-1u3bzj6-MuiFormControl-root-MuiTextField-root {
+  padding: 2% !important;
+}
+.css-1e6y48t-MuiButtonBase-root-MuiButton-root {
+  background-color: #b1590e !important;
+  color: white !important;
+  margin: 2% auto !important;
+}
+
 .separateAndStylesBlocsComments {
   background-color: rgb(190, 203, 243);
   border-bottom: 1.5px solid #060884;
@@ -114,4 +134,14 @@ Button {
   font-weight: 500!important;
   width: 90%!important;
   margin: 2%!important;
+}
+
+.css-isqn36-MuiButtonBase-root-MuiButton-root:hover {
+  color: white !important;
+  background-color: rgb(159 75 56) !important;
+}
+
+.css-1u3dy0u-MuiButtonBase-root-MuiButton-root:hover {
+  color: white !important;
+  background-color: rgb(159 75 56) !important;
 }

@@ -1,18 +1,27 @@
 .container {
-  display: flex;
+  /* display: flex; */
   background-color: '#fff';
-  align-items: 'center';
-  justify-content: 'center';
+  /* align-items: 'center';
+  justify-content: 'center'; */
   margin-top:70
 }
 .navStyles {
   margin-top:20; 
   margin-bottom: 15;
 }
-.containerp {
-  height:30; 
-  text-align: 'center';
-  font-weight: 600;
-  width: 220;
-  margin-top:30
+
+.headerImgRedirect {
+  background-image: url('./../../assets/BgndFleurs.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.css-1nrlq1o-MuiFormControl-root {
+  width: 50%;
 }

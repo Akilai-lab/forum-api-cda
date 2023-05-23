@@ -6,12 +6,12 @@
 }
 .App {
   text-align: center;
-  background-image: url('./assets/humanity-2045992_640.jpg');
+  background-image: url('./assets/BgndFleurs.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  width: 100%;
-  min-height: 600px;
+  width: calc(100% + 100px);
+  min-height: 800px;
 }
 #formLogin {
   background-color: #ffffffbd;
@@ -19,13 +19,13 @@
   padding: 5% 10%;
 }
 #formLogin label {
-  color: #9b1e1e;
+  color: black;
   font-weight: 700;
   text-transform: uppercase;
   font-size: 0.9em;
 }
 #formLogin button {
-  background-color: #ad1a1a;
+  background-color: #df634f;
   width: auto;
   color: white;
   font-size: 1.15em;

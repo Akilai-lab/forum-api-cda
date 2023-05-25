@@ -1,12 +1,2 @@
 {
-  "db": {
-    "userName": "forum",
-    "password": "root",
-    "server": "MariaDb",
-    "options": {
-        "database": "api_forum",
-        "encrypt": true,
-        "rowCollectionOnRequestCompletion" : true
-    }
-  }
 }

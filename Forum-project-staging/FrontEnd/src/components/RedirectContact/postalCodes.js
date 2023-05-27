@@ -28,11 +28,11 @@ const PostalCodes = () => {
           onChange={e => onChangeCodePostal(e.target.value)}
         />
         <TextField
-          id="codePostal"
+          id="professionnal"
           placeholder="Professionnel recherché"
           onChange={e => setSelectedValue(e.target.value)}
         />
-        <Button onClick={sendPostalCode}>Envoyer</Button>
+        <Button className='submitSearch' onClick={sendPostalCode}>Envoyer</Button>
       </FormControl>
     );
   }

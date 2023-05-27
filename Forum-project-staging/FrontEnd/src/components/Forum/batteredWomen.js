@@ -144,7 +144,7 @@ const BatteredWomen = () => {
           <br style={{ marginTop: 10 }}></br>
           <TextField id="Content" type="text" required label="Content" onChange={e => onChangeContent(e.target.value)} variant="outlined" />
           <br style={{ marginTop: 10 }}></br>
-          <Button onClick={() => funcToAddAPost(subject, content)} >Ajouter un post</Button>
+          <Button className='newPost' onClick={() => funcToAddAPost(subject, content)} >Ajouter un post</Button>
         </FormControl>
         {visualDatas()}
       </div>

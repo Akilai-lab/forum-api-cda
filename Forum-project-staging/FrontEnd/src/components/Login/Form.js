@@ -71,7 +71,7 @@ const SignupForm = () => {
         <br style={{marginTop:10}}></br>
         <Button onClick={sendDataCreateAccount}>S'inscrire</Button>
         <br style={{marginTop:10}}></br>
-        <Button onClick={sendDataLogin}>Se connecter</Button>
+        <Button className="btn-submit" onClick={sendDataLogin}>Se connecter</Button>
       </FormControl>
     );
   }

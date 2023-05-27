@@ -29,7 +29,7 @@ const Aides = ({ navigation }) => {
           <p className="classicp">
           Un parcours de soins pris en charge par l’Assurance Maladie.
           </p>
-          <Button
+          <Button className='redirectionMonParcoursPsy'
             onClick={() => RedirectionMonParcoursPsy()}
           >en savoir plus</Button>
         </div>
@@ -41,7 +41,7 @@ const Aides = ({ navigation }) => {
           </p>
           <p className="classicp">Décrypter la stigmatisation liée aux problèmes de santé mentale, et développer des outils pour agir contre les discriminations des personnes vivant avec des troubles psychiques.
           </p>
-          <Button
+          <Button className='redirectionPsyCom'
             onClick={() => RedirectionPsyCom()}
             >en savoir plus</Button>
         </div>
@@ -49,7 +49,7 @@ const Aides = ({ navigation }) => {
           <p className="title2">Site d'aide pour l'égalité des chances des français d'OUTRE-MER et la visibilité des OUTRE-MER</p>
           <p className="classicp">Recense de nombreuses aides destinées principalement aux etudiants, en lien avec les aides au logement, les contrats d'apprentissages ou encore des services d'écoutes. 
           </p>
-          <Button
+          <Button className='redirectionGouvernement'
             onClick={() => RedirectionGouvernement()}
           >en savoir plus</Button>
         </div>

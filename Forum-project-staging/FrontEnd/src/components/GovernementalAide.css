@@ -19,7 +19,7 @@
   font-weight:600;
   width:300;
   text-align:right;
-  color:#a90c8e
+  color:black
 }
 .classicp {
   width:270;
@@ -28,7 +28,7 @@
 }
 
 .headerImgRedirect {
-  background-image: url('./../../assets/BgndFleurs.jpeg');
+  background-image: url('./../assets/BgndFleurs.jpeg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -39,6 +39,12 @@
   flex-direction: row;
 }
 
-.redirectionMonParcoursPsy  .redirectionGouvernement  .redirectionPsyCom {
+.headerImgRedirect p {
+  width: 45%;
+}
+
+.redirectionMonParcoursPsy, .redirectionGouvernement, .redirectionPsyCom {
   width: 100% !important;
+  color: white !important;
+  font-weight: 600 !important;
 }

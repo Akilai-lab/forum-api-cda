@@ -7,23 +7,14 @@ import {Data} from './ForumStructure.js';
 import './styles.css';
 import Header from './../Header/header.js';
 import { getAllPosts, getAllComments, addAComment, addAPost, modifyComment, deletePost, DeleteComment, modifyPost } from './fonctionnalitiesForum.js';
-function handlePress(post) {
-  console.log(post);
-  console.log(post.id);
-}
+
 const PyschologicalDistress = () => {
-  const [isActiveForAddAnComment, setIsActiveForAddAnComment] = React.useState(false);
-
-  const [isActiveForModification, setIsActiveForModification] = React.useState(false);
-  const [isActiveForModificationAnComment, setIsActiveForModificationAnComment] = React.useState(false);
-
   const [subject, onChangeSubject] = React.useState("");
   const [content, onChangeContent] = React.useState("");
 
   const [arrayAboutComments, setArrayAboutComments] = React.useState([]);
   const [arrayAboutPosts, setarrayAboutPosts] = React.useState([]);
 
-  const [userId, onChangeUserId] = React.useState(sessionStorage.getItem('id'));
   useEffect(()=>{
     getAllComments(setArrayAboutComments);
     getAllPosts(setarrayAboutPosts);
@@ -35,7 +26,6 @@ const funcToModifyAComment = (comment, subject, content) => modifyComment(commen
 const functToDeleteAPost = (post) => deletePost(post);
 const funcToDeleteAComment = (comment) => DeleteComment(comment);
 const funcToModifyAPost = (post, subject, content) => modifyPost(post, subject, content);
-  const { RenderFormPost } = Data();
 
   const visualDatasComments = (post) => {
     return(
@@ -47,28 +37,30 @@ const funcToModifyAPost = (post, subject, content) => modifyPost(post, subject, 
                 <div className="containerList" >
                   <p className="pData">{comment.date}</p>
                 </div>
-                <p style={{pAlign:'center',fontSize:'medium',fontWeight:500}}>{comment.name}</p>
-                <p style={{marginTop:2, pAlign:'center'}}>{comment.content}</p>
-                {isActiveForModificationAnComment?
-                  <FormControl>
-                    <TextField id="Subject" required label="Subject" onChange={e => onChangeSubject(e.target.value)} variant="outlined" />
-                    <br style={{marginTop:10}}></br>
-                    <TextField id="Content" type="text" required label="Content" onChange={e => onChangeContent(e.target.value)} variant="outlined" />
-                    <br style={{marginTop:10}}></br>
-                    <Button onClick={()=>funcToModifyAComment(comment, subject, content)} >Envoyer</Button>
-                  </FormControl>
-                  : 
-                  <>
-                  <Button onClick={()=>{
-                    setIsActiveForModificationAnComment(true);
-                  }}>
-                    <p className="modifyPostsp">Modifier le commentaire</p>
-                  </Button>
-                  </>
-                }
-                <Button onClick={()=>{funcToDeleteAComment(comment)}}>
+                <p style={{ pAlign: 'center', fontSize: 'medium', fontWeight: 500 }}>{comment.name}</p>
+                <p style={{ marginTop: 2, pAlign: 'center' }}>{comment.content}</p>
+                {/* Formulaire pour modifier un commentaire */}
+                <FormControl id={`formModifCom${comment.id}`} className='form' style={{ display: 'none' }}>
+                  <TextField id="Subject" label="Subject" onChange={e => onChangeSubject(e.target.value)} variant="outlined" />
+                  <br style={{ marginTop: 10 }}></br>
+                  <TextField id="Content" type="text" label="Content" onChange={e => onChangeContent(e.target.value)} variant="outlined" />
+                  <br style={{ marginTop: 10 }}></br>
+                  <Button onClick={() => funcToModifyAComment(comment, subject, content)} >Envoyer</Button>
+                </FormControl>
+                <Button onClick={() => {
+                  document.getElementById("formModifCom" + comment.id).style.display = 'block';
+                }}>
+                  <p className="modifyPostsp">Modifier le commentaire</p>
+                </Button>
+
+                <Button onClick={() => { funcToDeleteAComment(comment) }}>
                   <p className="deletePostsStyle">Supprimer le commentaire</p>
                 </Button>
+                {/* Bouton pour cacher les commentaires */}
+                <Button onClick={() => {
+                  document.getElementById("isVisible" + post.id).style.display = 'none';
+                  document.getElementsByClassName('showComments').style.display ='none';
+                }}>Fermer</Button>
               </div>
               :
               ''
@@ -83,74 +75,74 @@ const funcToModifyAPost = (post, subject, content) => modifyPost(post, subject, 
       arrayAboutPosts.map((post) => {
         return (
           <div key={post.postId} className="separateAndStylesBlocsPosts">
-              <div className="postdiv">
-                <div className="containerList" >
-                  <p className="pData">{post.date}</p>
-                </div>
-                <p style={{pAlign:'center',color:'#0e0e99', fontSize:'medium',fontWeight:500}}>{post.name}</p>
-                <p style={{marginTop:2, pAlign:'center'}}>{post.content}</p>
-              </div>
-            {isActiveForModification?
-              <FormControl>
-                <TextField id="Subject" required label="Subject" onChange={e => onChangeSubject(e.target.value)} variant="outlined" />
-                <br style={{marginTop:10}}></br>
-                <TextField id="Content" type="text" required label="Content" onChange={e => onChangeContent(e.target.value)} variant="outlined" />
-                <br style={{marginTop:10}}></br>
-                <Button onClick={()=>funcToModifyAPost(post, subject, content)} >Envoyer</Button>
-              </FormControl>
-              : 
-              <>
-              <Button onClick={()=>{
-                setIsActiveForModification(true);
-              }}>
-                <p className="modifyPostsp">Modifier le post</p>
-              </Button>
-              </>
-            }
-            {isActiveForAddAnComment?
-              <FormControl>
-                <TextField id="Subject" required label="Subject" onChange={e => onChangeSubject(e.target.value)} variant="outlined" />
-                <br style={{marginTop:10}}></br>
-                <TextField id="Content" type="text" required label="Content" onChange={e => onChangeContent(e.target.value)} variant="outlined" />
-                <br style={{marginTop:10}}></br>
-                <Button onClick={()=>funcToAddAComm(post,subject, content)} >Envoyer</Button>
-              </FormControl>
-              : 
-              <>
-                <Button onClick={()=>{
-                  setIsActiveForAddAnComment(true);
-                  }
-                }>
-                  <p>Ajouter un commentaire</p>
-                </Button>
-              </>
-            }
-            <Button onClick={()=>{functToDeleteAPost(post)}}>
+          <div className="postdiv">
+            <div className="containerList" >
+              <p className="pData">{post.date}</p>
+            </div>
+            <p style={{ pAlign: 'center', fontSize: 'medium', fontWeight: 500 }}>Titre <br></br>{post.name}</p>
+            <p style={{ marginTop: 2, pAlign: 'center' }}>Contenu <br></br>{post.content}</p>
+          </div>
+          <div>
+            {/* Formulaire pour modifier un post */}
+            <FormControl id={post.id} className='form' style={{ display: 'none' }}>
+              <TextField id="Subject" label="Subject" onChange={e => onChangeSubject(e.target.value)} variant="outlined" />
+              <br style={{ marginTop: 10 }}></br>
+              <TextField id="Content" type="text" label="Content" onChange={e => onChangeContent(e.target.value)} variant="outlined" />
+              <br style={{ marginTop: 10 }}></br>
+              <Button onClick={() => funcToModifyAPost(post, subject, content)} >Envoyer</Button>
+            </FormControl>
+            <Button onClick={() => {
+              document.getElementById(post.id).style.display = "block";
+            }}>
+              <p className="modifyPostsp">Modifier le post</p>
+            </Button>
+
+            <Button onClick={() => { functToDeleteAPost(post) }}>
               <p className="deletePostsStyle">Supprimer le post</p>
             </Button>
-            {visualDatasComments(post)}
+          </div>
+          {/* Formulaire pour ajouter un commentaire */}
+          <FormControl id={`formForAddComment-${post.id}`} className='form' style={{ display: 'none' }}>
+            <TextField id="Subject" required label="Subject" onChange={e => onChangeSubject(e.target.value)} variant="outlined" />
+            <br style={{ marginTop: 10 }}></br>
+            <TextField id="Content" type="text" required label="Content" onChange={e => onChangeContent(e.target.value)} variant="outlined" />
+            <br style={{ marginTop: 10 }}></br>
+            <Button onClick={() => funcToAddAComm(post, subject, content)} >Envoyer</Button>
+          </FormControl>
+          <Button className='addComment' onClick={() => {
+            document.getElementById('formForAddComment-' + post.id).style.display = "block";
+          }}>
+            <p>Ajouter un commentaire</p>
+          </Button>
+          {/* On affiches les commentaires associés au post */}
+          <div id={`isVisible${post.id}`} style={{ display: 'none' }}>{visualDatasComments(post)}</div>
+          <Button className='showComments' onClick={() => {
+            console.log(document.getElementById("isVisible" + post.id));
+            document.getElementById("isVisible" + post.id).style.display = 'block';
+          }}>
+            <p>Voir les commentaires</p>
+          </Button>
         </div>
         );
       })
     )
   }
-  const renderForForm = () => {
-      return RenderFormPost();
-  }; //renderForForm()
+
   return (
     <div className="container">
-      <div>
-        <p className="containerp">Forum - <span>Pyschological Distress</span></p>
-        {/* {renderForForm()} */}
+      <div className='headerImg'>
+        <p className="containerp">
+          Forum - <span>Pyschological Distress</span>
+        </p>
+        <Header />
       </div>
-      <Header />
       <div className="borderPosts">
         <FormControl className='formAddPost'>
           <TextField id="Subject" required label="Subject" onChange={e => onChangeSubject(e.target.value)} variant="outlined" />
           <br style={{marginTop:10}}></br>
           <TextField id="Content" type="text" required label="Content" onChange={e => onChangeContent(e.target.value)} variant="outlined" />
           <br style={{marginTop:10}}></br>
-          <Button className='newPost' onClick={()=>funcToAddAPost(subject,content)} >Ajouter un post</Button>
+          <Button onClick={()=>funcToAddAPost(subject,content)} >Ajouter un post</Button>
         </FormControl>
         {visualDatas()}
       </div>

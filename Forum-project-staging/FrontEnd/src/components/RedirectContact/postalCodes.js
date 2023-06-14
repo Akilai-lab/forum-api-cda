@@ -1,17 +1,12 @@
 import React from 'react';
 import {Button, FormControl, TextField} from '@mui/material';
 import * as codesPostaux from "codes-postaux";
-// const codesPostaux = require('codes-postaux');
-/* url api codes postaux */
-/* https://github.com/BaseAdresseNationale/codes-postaux */
+
 let code;
 const PostalCodes = () => {
   const [codePostal, onChangeCodePostal] = React.useState(null);
   const [selectedValue, setSelectedValue] = React.useState(null);
-  /*  */
-  const onChangeSubject = () => {
-    console.log(codePostal);
-  }
+
   function sendPostalCode(){
     code = codesPostaux.find(codePostal);
     let professionnelDoctor = selectedValue;
@@ -19,9 +14,10 @@ const PostalCodes = () => {
     window.location.href = url;
   }
   const renderPostal = () => {
-    //color button envoyer : color="#3629a3"
     return (
-      <FormControl>
+      <FormControl style={{
+        width: '70%'
+      }}>
         <TextField
           id="codePostal"
           placeholder="Entrez votre code postal"

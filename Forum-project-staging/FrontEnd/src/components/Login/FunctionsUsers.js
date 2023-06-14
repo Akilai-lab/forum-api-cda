@@ -1,6 +1,3 @@
-import {datasLoginUser, datasLoginUser2, forumDataArray, forumCommentDataArray} from './../../data/mock.js';
-// import fetch from 'node-fetch';
-
 // Se Déconnecter de son compte
 export const disconnectToAccount = (userId) =>{
   sessionStorage.clear();

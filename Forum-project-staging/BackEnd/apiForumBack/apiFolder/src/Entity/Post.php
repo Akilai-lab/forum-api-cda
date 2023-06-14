@@ -2,12 +2,12 @@
 declare(strict_types=1);
 namespace App\Entity;
 
-use App\Repository\ForumRepository;
+use App\Repository\PostRepository;
 use Doctrine\ORM\Mapping as ORM;
 
-#[ORM\Entity(repositoryClass: ForumRepository::class)]
-#[ORM\Table(name: 'forum')]
-class Forum
+#[ORM\Entity(repositoryClass: PostRepository::class)]
+#[ORM\Table(name: 'post')]
+class Post
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]

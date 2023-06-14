@@ -2,27 +2,27 @@
 
 namespace App\Repository;
 
-use App\Entity\Forum;
+use App\Entity\Post;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Component\Security\Core\Exception\UnsupportedUserException;
 
 /**
- * @extends ServiceEntityRepository<Forum>
+ * @extends ServiceEntityRepository<Post>
  *
  * @method Forum|null find($id, $lockMode = null, $lockVersion = null)
  * @method Forum|null findOneBy(array $criteria, array $orderBy = null)
  * @method Forum[]    findAll()
  * @method Forum[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class ForumRepository extends ServiceEntityRepository
+class PostRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
         parent::__construct($registry, Forum::class);
     }
 
-    public function save(Forum $forum, bool $flush = false): void
+    public function save(Post $forum, bool $flush = false): void
     {
         $this->getEntityManager()->persist($forum);
 
@@ -31,7 +31,7 @@ class ForumRepository extends ServiceEntityRepository
         }
     }
 
-    public function remove(Forum $forum, bool $flush = false): void
+    public function remove(Post $forum, bool $flush = false): void
     {
         $this->getEntityManager()->remove($forum);
 

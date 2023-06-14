@@ -20,7 +20,7 @@ class Comments
     private ?int $user_id = null;
 
     #[ORM\JoinColumn(name:"post_id", referencedColumnName:"id")]
-    #[ORM\ManyToOne(targetEntity:"Forum")]
+    #[ORM\ManyToOne(targetEntity:"Post")]
     #[ORM\Column(nullable: true)]
 
     private ?int $post_id = null;

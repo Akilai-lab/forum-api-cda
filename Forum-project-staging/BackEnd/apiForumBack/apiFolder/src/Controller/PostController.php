@@ -3,14 +3,14 @@
 namespace App\Controller;
 
 use App\Entity\Comments;
-use App\Entity\Forum;
+use App\Entity\Post;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
 use Doctrine\Persistence\ManagerRegistry;
 
-class ForumController extends AbstractController
+class PostController extends AbstractController
 {
     private $jwtManager;
     public function __construct(private ManagerRegistry $doctrine) {
@@ -22,15 +22,15 @@ class ForumController extends AbstractController
         //TODO: Implémenter une fonction qui va permettre d'ajouter un post au forum
         $data = json_decode($request->getContent(), true);
 
-        $forum = new Forum();
-        $forum->setDate($data['date']);
-        $forum->setName($data['subject']);
-        $forum->setContent($data['contenu']);
-        $forum->setUserId($data['userId']);
-        $forum->setType($data['typeForum']);
+        $post = new Post();
+        $post->setDate($data['date']);
+        $post->setName($data['subject']);
+        $post->setContent($data['contenu']);
+        $post->setUserId($data['userId']);
+        $post->setType($data['typeForum']);
 
         $entityManager = $this->doctrine->getManager();
-        $entityManager->persist($forum);
+        $entityManager->persist($post);
         $entityManager->flush();
 
         return $this->json(
@@ -45,7 +45,7 @@ class ForumController extends AbstractController
     {
         //TODO: Implémenter une fonction qui va permettre de récupérer tous les posts
         //récupérer la valeur de typeForum de l'url pour faire une recherche comparative avec les types se trouvant dans la bdd
-        $allPosts = $this->doctrine->getRepository(Forum::class)->findBy(['type' => $typeForum]);
+        $allPosts = $this->doctrine->getRepository(Post::class)->findBy(['type' => $typeForum]);
 
         return $this->json(
             (object)[
@@ -63,7 +63,7 @@ class ForumController extends AbstractController
         $titre = $data['subject'];
         $contenu = $data['contenu'];
         //on récupére le post à modifier
-        $post_to_change = $this->doctrine->getRepository(Forum::class)->findOneBy(['id' => $data['postId']]);
+        $post_to_change = $this->doctrine->getRepository(Post::class)->findOneBy(['id' => $data['postId']]);
         
         //on modifie les données du post et on les renvoi à la bdd
         if($titre !== '') {
@@ -94,7 +94,7 @@ class ForumController extends AbstractController
         $data = json_decode($request->getContent(), true);
         
         //on récupére le post qui a le même id que celui récupéré 
-        $deletePost = $this->doctrine->getRepository(Forum::class)->findOneBy(['id' => $data]);
+        $deletePost = $this->doctrine->getRepository(Post::class)->findOneBy(['id' => $data]);
         
         //on récupère tous les commentaires qui ont comme postId l'iD récupéré 
         $deleteCommentOfPostSelectionned = $this->doctrine->getRepository(Comments::class)->findBy(['post_id' => $data]);

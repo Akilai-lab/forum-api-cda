@@ -3,7 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\User;
-use App\Entity\Forum;
+use App\Entity\Post;
 use App\Entity\Comments;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -95,7 +95,7 @@ class RegistrationController extends AbstractController
 
         // Récupérer l'utilisateur depuis la base de données
         $user = $this->doctrine->getRepository(User::class)->findOneBy(['id' => $data]);
-        $postsUser = $this->doctrine->getRepository(Forum::class)->findOneBy(['user_id' => $data]);
+        $postsUser = $this->doctrine->getRepository(Post::class)->findOneBy(['user_id' => $data]);
         $commentsUser = $this->doctrine->getRepository(Comments::class)->findOneBy(['user_id' => $data]);
       
         $entityManager = $this->doctrine->getManager();
@@ -119,16 +119,7 @@ class RegistrationController extends AbstractController
             //sinon on va juste supprimer l'element
             $entityManager->remove($commentsUser);
         }
-    /*
-        An exception occurred while executing a query: SQLSTATE[23000]: 
-            Integrity constraint violation: 1451 
-            Cannot delete or update a parent row: 
-            a foreign key constraint fails (
-                `api_forum`.`commentToPost`, 
-                CONSTRAINT `commentToPost_ibfk_3`
-                FOREIGN KEY (`post_id`) REFERENCES `forumPost` (`id`)
-            )
-    */
+
         $entityManager->flush();
     
         return new JsonResponse([

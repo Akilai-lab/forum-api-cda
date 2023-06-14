@@ -46,7 +46,7 @@ describe('Fonctionnalities Login And Forum', () => {
 
 describe('Forum Children Page', () => {
   it('successfully loads', () => {
-    cy.visit('http://localhost:3000/ChildrenAid')
+    cy.visit('http://localhost:3000/selfHelpChildren')
   })
 })
 

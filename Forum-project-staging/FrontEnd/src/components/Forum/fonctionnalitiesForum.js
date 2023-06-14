@@ -48,7 +48,6 @@ export function addAPost(subject, content){
         date: (new Date()).toLocaleDateString(),
         typeForum: typeForum,
         userId: sessionStorage.getItem('userId')
-        // userId: Number(sessionStorage.getItem('userId'))
     }
     fetch('http://localhost:8081/addPost', {
         method: 'POST',
@@ -64,7 +63,7 @@ export function addAPost(subject, content){
         .catch((err)=>console.log(err));
     })
     .then(()=> {
-        // window.location.reload(true);
+        window.location.reload(true);
     })
     .catch(error => console.error(error));
 }
@@ -78,7 +77,6 @@ export function addAComment(post,subject, content) {
         contenu : content,
         date: (new Date()).toLocaleDateString(),
         userId: sessionStorage.getItem('userId'),
-        // userId: Number(sessionStorage.getItem('userId')),
         typeForum: typeForum,
         postId : Number(post.id),
     }
@@ -107,7 +105,6 @@ export function modifyComment(comment, subject, content) {
         subject : subject,
         contenu : content,
         userId: sessionStorage.getItem('userId'),
-        // userId: Number(sessionStorage.getItem('userId')),
         commentId: Number(comment.id)
     }
     fetch('http://localhost:8081/modifyOneComment', {
@@ -179,7 +176,6 @@ export function modifyPost(post, subject, content){
         subject : subject,
         contenu : content,
         userId: sessionStorage.getItem('userId'),
-        // userId: Number(sessionStorage.getItem('userId')),
         postId: Number(post.id)
     }
 

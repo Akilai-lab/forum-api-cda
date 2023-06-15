@@ -12,7 +12,7 @@ const PostalCodes = () => {
     let professionnelDoctor = (((selectedValue.split("")).join(" ")).replaceAll(/[éè]+/g,'e'));
 
     let url = "https://www.doctolib.fr/"+(professionnelDoctor.replaceAll('  ',' -')).replaceAll(' ','').toLowerCase()+"/"+(code[0].nomCommune).toLowerCase();
-    window.location.href = url;
+    window.open(url, '_blank');
   }
   const renderPostal = () => {
     return (

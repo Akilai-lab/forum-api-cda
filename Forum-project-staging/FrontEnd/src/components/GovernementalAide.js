@@ -6,15 +6,15 @@ import './GovernementalAide.css';
 const Aides = () => {
   function RedirectionMonParcoursPsy(){
       let url = "https://monparcourspsy.sante.gouv.fr/";
-      window.location.href = url;
+      window.open(url, '_blank');
   }
   function RedirectionPsyCom(){
       let url = "https://www.psycom.org/sorienter/les-lignes-decoute/";
-      window.location.href = url;
+      window.open(url, '_blank');
   }
   function RedirectionGouvernement(){
       let url = "https://www.gouvernement.fr/egalite-outremer/associations-0";
-      window.location.href = url;
+      window.open(url, '_blank');
   }
     return (
       <div className="container">

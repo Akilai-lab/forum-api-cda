@@ -9,8 +9,9 @@ const PostalCodes = () => {
 
   function sendPostalCode(){
     code = codesPostaux.find(codePostal);
-    let professionnelDoctor = selectedValue;
-    let url = "https://www.doctolib.fr/"+professionnelDoctor.toLowerCase()+"/"+(code[0].nomCommune).toLowerCase();
+    let professionnelDoctor = (((selectedValue.split("")).join(" ")).replaceAll(/[éè]+/g,'e'));
+
+    let url = "https://www.doctolib.fr/"+(professionnelDoctor.replaceAll('  ',' -')).replaceAll(' ','').toLowerCase()+"/"+(code[0].nomCommune).toLowerCase();
     window.location.href = url;
   }
   const renderPostal = () => {

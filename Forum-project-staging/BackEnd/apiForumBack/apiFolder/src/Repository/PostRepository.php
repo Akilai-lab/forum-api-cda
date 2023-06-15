@@ -10,30 +10,30 @@ use Symfony\Component\Security\Core\Exception\UnsupportedUserException;
 /**
  * @extends ServiceEntityRepository<Post>
  *
- * @method Forum|null find($id, $lockMode = null, $lockVersion = null)
- * @method Forum|null findOneBy(array $criteria, array $orderBy = null)
- * @method Forum[]    findAll()
- * @method Forum[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method Post|null find($id, $lockMode = null, $lockVersion = null)
+ * @method Post|null findOneBy(array $criteria, array $orderBy = null)
+ * @method Post[]    findAll()
+ * @method Post[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
 class PostRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, Forum::class);
+        parent::__construct($registry, Post::class);
     }
 
-    public function save(Post $forum, bool $flush = false): void
+    public function save(Post $post, bool $flush = false): void
     {
-        $this->getEntityManager()->persist($forum);
+        $this->getEntityManager()->persist($post);
 
         if ($flush) {
             $this->getEntityManager()->flush();
         }
     }
 
-    public function remove(Post $forum, bool $flush = false): void
+    public function remove(Post $post, bool $flush = false): void
     {
-        $this->getEntityManager()->remove($forum);
+        $this->getEntityManager()->remove($post);
 
         if ($flush) {
             $this->getEntityManager()->flush();

@@ -54,17 +54,6 @@ services:
 
 volumes:
   db_data: {}
-#docker exec -it backend-web-forum-php-1 sh
-
-#docker exec -it web-forum-php sh
-#docker-compose exec php bin/console doctrine:migrations:migrate
-
-# resultat
-
-# marina_perez@LAPTOP-O1DI5RE4:~/dev/Forum-project-staging/back_end$ docker exec -it api_forum_adminer_1 sh
-# /var/www/html $ php bin/console make:migration
-# Could not open input file: bin/console
-# /var/www/html $ 
 
 # Start containers with docker-compose up -d
 # Go into the php container with docker-compose exec php bash

@@ -24,7 +24,7 @@ class CommentsController extends AbstractController
         $comment = new Comments();
         $comment->setDate($data['date']);
         $comment->setName($data['subject']);
-        $comment->setContent($data['contenu']);
+        $comment->setContent($data['content']);
         $comment->setUserId($data['userId']);
         $comment->setPostId($data['postId']);
         $comment->setType($data['typeForum']);
@@ -59,7 +59,7 @@ class CommentsController extends AbstractController
         $data = json_decode($request->getContent(), true);
         
         $titre = $data['subject'];
-        $contenu = $data['contenu'];
+        $content = $data['content'];
         //on récupére le post à modifier
         $comment_to_change = $this->doctrine->getRepository(Comments::class)->findOneBy(['id' => $data['commentId']]);
         
@@ -70,8 +70,8 @@ class CommentsController extends AbstractController
             $entityManager->persist($comment_to_change);
             $entityManager->flush();
         }
-        if($contenu !== '') {
-            $comment_to_change->setContent($contenu);
+        if($content !== '') {
+            $comment_to_change->setContent($content);
             $entityManager = $this->doctrine->getManager();
             $entityManager->persist($comment_to_change);
             $entityManager->flush();

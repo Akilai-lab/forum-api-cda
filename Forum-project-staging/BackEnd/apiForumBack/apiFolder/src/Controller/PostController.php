@@ -25,7 +25,7 @@ class PostController extends AbstractController
         $post = new Post();
         $post->setDate($data['date']);
         $post->setName($data['subject']);
-        $post->setContent($data['contenu']);
+        $post->setContent($data['content']);
         $post->setUserId($data['userId']);
         $post->setType($data['typeForum']);
 
@@ -61,7 +61,7 @@ class PostController extends AbstractController
         $data = json_decode($request->getContent(), true);
         
         $titre = $data['subject'];
-        $contenu = $data['contenu'];
+        $content = $data['content'];
         //on récupére le post à modifier
         $post_to_change = $this->doctrine->getRepository(Post::class)->findOneBy(['id' => $data['postId']]);
         
@@ -72,8 +72,8 @@ class PostController extends AbstractController
             $entityManager->persist($post_to_change);
             $entityManager->flush();
         }
-        if($contenu !== '') {
-            $post_to_change->setContent($contenu);
+        if($content !== '') {
+            $post_to_change->setContent($content);
             $entityManager = $this->doctrine->getManager();
             $entityManager->persist($post_to_change);
             $entityManager->flush();

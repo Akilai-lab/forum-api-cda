@@ -22,7 +22,7 @@ export const forumDataArray = [ // Dans ce tableau il y aura les donnnées récu
   {
     id: 1,
     subject : 'Sujet',
-    contenu : "Bonjour, voilà à quoi correspond mon premier sujet j'aimerai avoir votre avis",
+    content : "Bonjour, voilà à quoi correspond mon premier sujet j'aimerai avoir votre avis",
     date : "22/12/2021",
     heure : "14h45",
     idUser: 1
@@ -30,7 +30,7 @@ export const forumDataArray = [ // Dans ce tableau il y aura les donnnées récu
   {
     id: 2,
     subject : 'Sujet',
-    contenu : "Bonjour, voilà à quoi correspond mon premier sujet j'aimerai avoir votre avis",
+    content : "Bonjour, voilà à quoi correspond mon premier sujet j'aimerai avoir votre avis",
     date : "23/12/2021",
     heure : "14h45",
     idUser: 2
@@ -38,7 +38,7 @@ export const forumDataArray = [ // Dans ce tableau il y aura les donnnées récu
   {
     id: 3,
     subject : 'Sujet',
-    contenu : "Bonjour, voilà à quoi correspond mon premier sujet j'aimerai avoir votre avis",
+    content : "Bonjour, voilà à quoi correspond mon premier sujet j'aimerai avoir votre avis",
     date : "24/12/2021",
     heure : " 14h45",
     idUser: 3
@@ -46,7 +46,7 @@ export const forumDataArray = [ // Dans ce tableau il y aura les donnnées récu
   {
     id:4,
     subject : 'Sujet',
-    contenu : "Bonjour, voilà à quoi correspond mon premier sujet j'aimerai avoir votre avis",
+    content : "Bonjour, voilà à quoi correspond mon premier sujet j'aimerai avoir votre avis",
     date : "23/03/2023",
     heure : "17h45",
     idUser: 4
@@ -54,7 +54,7 @@ export const forumDataArray = [ // Dans ce tableau il y aura les donnnées récu
   {
     id:5,
     subject : 'Sujet',
-    contenu : "Bonjour, voilà à quoi correspond mon premier sujet j'aimerai avoir votre avis",
+    content : "Bonjour, voilà à quoi correspond mon premier sujet j'aimerai avoir votre avis",
     date : "14/02/2023",
     heure : " 14h45",
     idUser: 5
@@ -64,7 +64,7 @@ export const forumCommentDataArray = [ // Dans ce tableau il y aura les donnnée
   {
     id : 1,
     subject : 'Reponse au sujet',
-    contenu : "Bonjour, voilà à quoi correspond mon premier sujet j'aimerai avoir votre avis",
+    content : "Bonjour, voilà à quoi correspond mon premier sujet j'aimerai avoir votre avis",
     date : "22/12/2021",
     heure : "14h45",
     idUser: 1, 
@@ -73,7 +73,7 @@ export const forumCommentDataArray = [ // Dans ce tableau il y aura les donnnée
   {
     id : 2,
     subject : 'Reponse au sujet',
-    contenu : "Bonjour, voilà à quoi correspond mon premier sujet j'aimerai avoir votre avis",
+    content : "Bonjour, voilà à quoi correspond mon premier sujet j'aimerai avoir votre avis",
     date : "23/12/2021",
     heure : "14h45",
     idUser: 2,
@@ -82,7 +82,7 @@ export const forumCommentDataArray = [ // Dans ce tableau il y aura les donnnée
   {
     id : 3,
     subject : 'Reponse au sujet',
-    contenu : "Bonjour, voilà à quoi correspond mon premier sujet j'aimerai avoir votre avis",
+    content : "Bonjour, voilà à quoi correspond mon premier sujet j'aimerai avoir votre avis",
     date : "24/12/2021",
     heure : " 14h45",
     idUser: 3,
@@ -91,7 +91,7 @@ export const forumCommentDataArray = [ // Dans ce tableau il y aura les donnnée
   {
     id : 4,
     subject : 'Reponse au sujet',
-    contenu : "Bonjour, voilà à quoi correspond mon premier sujet j'aimerai avoir votre avis",
+    content : "Bonjour, voilà à quoi correspond mon premier sujet j'aimerai avoir votre avis",
     date : "23/03/2023",
     heure : "17h45",
     idUser: 2,

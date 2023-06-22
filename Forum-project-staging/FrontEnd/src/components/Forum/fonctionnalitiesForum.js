@@ -44,7 +44,7 @@ export function addAPost(subject, content){
     let typeForum = document.querySelector(".containerp span").textContent.replaceAll(' ', '_');
     const data = {
         subject : subject,
-        contenu : content,
+        content : content,
         date: (new Date()).toLocaleDateString(),
         typeForum: typeForum,
         userId: sessionStorage.getItem('userId')
@@ -74,7 +74,7 @@ export function addAComment(post,subject, content) {
 
     const data = {
         subject : subject,
-        contenu : content,
+        content : content,
         date: (new Date()).toLocaleDateString(),
         userId: sessionStorage.getItem('userId'),
         typeForum: typeForum,
@@ -103,7 +103,7 @@ export function addAComment(post,subject, content) {
 export function modifyComment(comment, subject, content) {
     const data = {
         subject : subject,
-        contenu : content,
+        content : content,
         userId: sessionStorage.getItem('userId'),
         commentId: Number(comment.id)
     }
@@ -174,7 +174,7 @@ export function DeleteComment(comment){
 export function modifyPost(post, subject, content){
     const data = {
         subject : subject,
-        contenu : content,
+        content : content,
         userId: sessionStorage.getItem('userId'),
         postId: Number(post.id)
     }

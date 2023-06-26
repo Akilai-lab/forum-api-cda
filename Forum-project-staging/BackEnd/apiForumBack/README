@@ -1,0 +1,31 @@
+## Install
+
+  ## Installation de curl ##
+    sudo apt-get install curl
+
+  ## Installer docker-compose et changer les autorisations ##
+  sudo curl -L "https://github.com/docker/compose/releases/download/1.23.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/bin/docker-compose && sudo chmod +x /usr/bin/docker-compose
+
+  php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+  php -r "if (hash_file('sha384', 'composer-setup.php') === '906a84df04cea2aa72f40b5f787e49f22d4c2f19492ac310e8cba5b96ac8b64115ac402c8cd292b8a03482574915d1a8') {​​​​​ echo 'Installer verified'; }​​​​​ else {​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​ echo 'Installer corrupt'; unlink('composer-setup.php'); }​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​ echo PHP_EOL;"
+  sudo php composer-setup.php --install-dir /usr/bin --filename composer
+  php -r "unlink('composer-setup.php');"
+
+  ### Installation de dépendances
+
+  ### Démarrer le service docker
+  sudo service docker start
+
+  ### Lancer les conteneurs docker
+  docker-compose up
+
+## Local Installation
+Il faut générer de clefs SSL (la doc du site : https://github.com/lexik/LexikJWTAuthenticationBundle/blob/2.x/Resources/doc/index.rst#generate-the-ssl-keys)
+
+via cette commande dans le terminal à la racine de votre projet : $ php bin/console lexik:jwt:generate-keypair
+les clefs vont être créée dans config/jwt/private.pem et dans config/jwt/public.pem
+
+## Bonus
+commande utilent:
+
+docker exec -it apiforumback-web-php-bloc-1 sh

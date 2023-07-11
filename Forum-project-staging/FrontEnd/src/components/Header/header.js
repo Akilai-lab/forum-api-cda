@@ -60,7 +60,7 @@ const Header = () => {
                             minHeight: '60px',
                             bgcolor:'white'
                             }}
-                        >Go to Women Forum</Button>
+                        >Forum Entraide Femmes Battues</Button>
                     </div>
                 </Grid>
                 <Grid item xs={4}>
@@ -74,7 +74,7 @@ const Header = () => {
                             minHeight: '60px',
                             bgcolor:'white'
                             }}
-                        >Go to Children Forum</Button>
+                        >Forum Entraide Enfants</Button>
                     </div>
                 </Grid>
                 <Grid item xs={4}>
@@ -88,7 +88,7 @@ const Header = () => {
                             minHeight: '60px',
                             bgcolor:'white'
                             }}
-                        >Go to Psychologic Distress Forum</Button>
+                        >Forum Entraide Detresse Psychologique</Button>
                     </div>
                 </Grid>
                 <Grid item xs={4}>
@@ -102,7 +102,7 @@ const Header = () => {
                             minHeight: '60px',
                             bgcolor:'white',
                             }}
-                        >Go to Redirect Contact Pro</Button>
+                        >Redirection Contact Professionnels</Button>
                     </div>
                 </Grid>
                 <Grid item xs={4}>
@@ -116,7 +116,7 @@ const Header = () => {
                             minHeight: '60px',
                             bgcolor:'white',
                             }}
-                        >Go to Gouvernementales Aides</Button>
+                        >Aides Gouvernementales</Button>
                     </div>
                 </Grid>
             </Grid>
